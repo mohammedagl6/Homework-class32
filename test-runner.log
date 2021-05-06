@@ -42,3 +42,8 @@
 2021-05-05 11:24:29 info: -------------------------------------------
 2021-05-05 11:24:38 info: All unit tests passed.
 2021-05-05 11:24:43 info: All steps were completed successfully
+2021-05-06 08:56:06 info: -------------------------------------------
+2021-05-06 08:56:06 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2021-05-06 08:56:06 info: -------------------------------------------
+2021-05-06 08:56:14 info: All unit tests passed.
+2021-05-06 08:56:17 info: All steps were completed successfully
