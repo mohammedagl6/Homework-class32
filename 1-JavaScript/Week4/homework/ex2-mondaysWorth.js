@@ -29,8 +29,16 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
+function computeEarnings(mondayTasks, hourlyRate) {
   // TODO complete this function
+  /* let totalEarnings = 0;
+  mondayTasks.map(({duration})=>{
+    totalEarnings += (Number(duration)/60)*hourlyRate;
+  });
+  return `€${totalEarnings.toFixed(2)}`;*/
+  // I think reduce function is better to be used here than map
+  return `€${mondayTasks.reduce((totalEarnings, {duration}) => totalEarnings + (Number(duration)/60)*hourlyRate , 0).toFixed(2)}`
+  
 }
 
 // example use case
