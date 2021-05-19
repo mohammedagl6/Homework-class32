@@ -1,0 +1,3 @@
+*** Unit Test Error Report ***
+
+- mondaysWorth should use `map`
