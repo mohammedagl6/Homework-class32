@@ -41,6 +41,23 @@ const myBooks = [
 
 function createBookList(books) {
   // your code goes in here, return the ul element
+  const booksList = document.createElement('ul');
+  books.forEach(({title, author, alreadyRead}) => {
+    const listItem = document.createElement('li');
+    const bookParagraph = document.createElement('p');
+    const bookImage = document.createElement('img');
+    const imgName = title.split(' ').join('_');
+    bookParagraph.textContent = `${title} - ${author}`;
+    bookImage.src = `assets/${imgName}.jpg`;
+    bookImage.alt = title;
+    listItem.appendChild(bookParagraph);
+    listItem.appendChild(bookImage);
+    listItem.style.background = (alreadyRead)? "green" : "red";
+    /*Object.assign(listItem.style, {width: "calc(25% - 51px)", margin: "25px", padding: "10px", minWidth: "350px"});*/
+    booksList.appendChild(listItem);
+  });
+  /*booksList.style.cssText = "list-style:none; display: flex; flex-wrap: wrap; padding: 20px; width: calc( 100% - 41px);";*/
+  return booksList;
 }
 
 const ulElement = createBookList(myBooks);
