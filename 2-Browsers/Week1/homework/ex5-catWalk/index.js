@@ -25,13 +25,13 @@ function catWalk() {
   const originalCatURL = walkingCat.src;
   const dancingCatURL= "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
   let walkingStep = 0;
-  let isDancing = true;
+  let isWalking = true;
   function catWalkClosure(){
    walkingCat.style.left = `${walkingStep}px`;
    walkingStep +=10;
-   if(walkingStep + walkingCat.width >= Math.floor(document.body.clientWidth/2 + walkingCat.width/2) && isDancing){
+   if(walkingStep + walkingCat.width >= Math.floor(document.body.clientWidth/2 + walkingCat.width/2) && isWalking){
       clearInterval(walkingInterval);
-      isDancing = false;
+      isWalking = false;
       walkingCat.src = dancingCatURL;
       setTimeout(() => {
          walkingCat.src = originalCatURL;
@@ -42,7 +42,7 @@ function catWalk() {
    }
    if(walkingStep + walkingCat.width >= document.body.clientWidth){
       walkingStep = 0;
-      isDancing = true;
+      isWalking = true;
    }
   }
 
