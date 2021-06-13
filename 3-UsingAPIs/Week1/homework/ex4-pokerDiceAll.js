@@ -26,12 +26,12 @@ const rollDice = require('../../helpers/pokerDiceRoller');
 function rollTheDices() {
   // TODO Refactor this function
   const dices = [1, 2, 3, 4, 5];
-  return rollDice(1);
+  return Promise.all( dices.map(dice => rollDice(dice)) );
 }
 
 rollTheDices()
   .then((results) => console.log('Resolved!', results))
   .catch((error) => console.log('Rejected!', error.message));
-
+/***** in case of rejection Promise.all() does not wait for all the promises to be finished. It just gets the first rejection and accepts it as the only result. So the function rollDice continues its execution and continues console logging the messages *****/
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
