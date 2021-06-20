@@ -1,0 +1,10 @@
+*** Unit Test Error Report ***
+
+- pokemonApp HTML should be syntactically valid
+  inline
+    11:2   error  <button> is missing required "type" attribute  element-required-attributes
+    11:71  error  <img> is missing required "src" attribute      element-required-attributes
+    11:71  error  <img> is missing required "alt" attribute      wcag/h37
+  
+  ✖ 3 problems (3 errors, 0 warnings)
+  
